@@ -109,6 +109,10 @@ footer a {
           <p>Led Navy Reserve Center Syracuse in providing Full-Time Support to over 200 Navy Reserve sailors and led 13 staff members in execution of the command mission. Coordinated training, readiness, and mission planning for eight Reserve units.</p>
           <hr>
         </div>
+
+        <button onclick="toggleHistory()" id="showMoreBtn" class="w3-button w3-teal w3-round">Show More</button>
+        <!-- Hidden Work History -->
+        <div id="more-history" style="display: none;">
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Officer Recruiter, Division Officer, Nuke Coordinator / NTAG San Francisco</b></h5>
           <h7 class="w3-text-teal">Mar 2013 - Jul 2015</h7>
@@ -145,6 +149,7 @@ footer a {
           <h7 class="w3-text-teal">Aug 1999 - Sep 2001</h7>
           <p>‘A’ School class leader and nuclear power school class leader. Selected for Staff Pickup instructor duty at the MARF reactor plant. Taught basic math and electrical theory to enlisted and officer students.</p>
         </div>
+      </div>
       </div>
 
       <div class="w3-container w3-card w3-white">
@@ -204,5 +209,20 @@ footer a {
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   -->
 </footer>
+<script>
+  function toggleHistory() {
+    var moreHistory = document.getElementById("more-history");
+    var btn = document.getElementById("showMoreBtn");
+
+    if (moreHistory.style.display === "none") {
+      moreHistory.style.display = "block";
+      btn.innerHTML = "Show Less";
+    } else {
+      moreHistory.style.display = "none";
+      btn.innerHTML = "Show More";
+    }
+  }
+</script>
+
 </body>
 </html>
